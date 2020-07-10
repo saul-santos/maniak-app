@@ -21,12 +21,11 @@ function Navbar() {
                                 <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/testimonial">Testimonial</Link>
+                                <Link to="/testimonials">Testimonials</Link>
                             </li>
-                            <li>Stories</li>
-                            <li>Partners</li>
-                            <li>About</li>
-                            <li>Blog</li>
+                            <li>
+                                <Link to="/calculator">Calculator</Link>
+                            </li>
                         </ul>
                     </nav>
                 </Col>
@@ -35,4 +34,4 @@ function Navbar() {
     );
 }
 
-export { Navbar };
+export default Navbar;

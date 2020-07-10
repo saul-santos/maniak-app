@@ -1,9 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { Navbar } from './components';
+import { Calculator, Testimonials } from "./containers";
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { Navbar, Testimonial } from './components';
 
 function App() {
     document.body.style = 'background-color: var(--main-bg-color)';
@@ -12,15 +11,15 @@ function App() {
         <Router>
             <Navbar />
             <Switch>
-                <Route path="/testimonial">
-                    <Testimonial />
+                <Route path="/testimonials">
+                    <Testimonials />
                 </Route>
-                <Route path="/page2">
-                    Page 2
-                </Route>
+                <Route path="/calculator">
+                    <Calculator />
+            </Route>
                 <Route path="/">
                     Home
-                </Route>
+            </Route>
             </Switch>
         </Router>
     );

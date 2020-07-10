@@ -1,1 +1,3 @@
-export { Navbar } from './Navbar.jsx';
+import Navbar from './Navbar';
+
+export { Navbar };

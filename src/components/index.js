@@ -1,2 +1,3 @@
-export { Navbar } from './navbar';
-export { Testimonial } from './testimonial';
+export { Navbar } from './Navbar';
+export { Calculator } from './Calculator';
+export { Testimonials } from './Testimonials';
