@@ -10,7 +10,7 @@ function* fetchCalculatorData() {
     try {
         const data = yield call(_fetchCalculatorData);
         
-        yield put(setCalculatorData(data));
+        yield put(setCalculatorData(data.calculator));
 
     } catch (e) {
         console.error(e);

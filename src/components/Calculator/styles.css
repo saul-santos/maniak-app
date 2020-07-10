@@ -1,0 +1,11 @@
+.ballotero-title {
+    padding: 5rem 0 0.5rem 0;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: 0.77px;
+    color: var(--main-primary-color);
+}
