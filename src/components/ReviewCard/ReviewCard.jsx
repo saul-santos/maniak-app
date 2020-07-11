@@ -1,5 +1,6 @@
 import React from "react";
 import Card  from "react-bootstrap/Card";
+import PropTypes from 'prop-types';
 
 function ReviewCard({ name, position, comment }) {
     return (
@@ -18,5 +19,11 @@ function ReviewCard({ name, position, comment }) {
         </Card>
     );
 }
+
+ReviewCard.propTypes = {
+    name: PropTypes.string,
+    position: PropTypes.string,
+    comment: PropTypes.string,
+};
 
 export default ReviewCard;

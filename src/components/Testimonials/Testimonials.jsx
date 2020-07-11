@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -46,5 +47,17 @@ function Testimonials({ actions, testimonials }) {
         </Container>
     );
 }
+
+Testimonials.propTypes = {
+    actions: PropTypes.shape({
+        fetchTestimonials: PropTypes.func
+    }),
+    testimonials: PropTypes.exact({
+        slider: PropTypes.exact({
+            title: PropTypes.string,
+            reviews: PropTypes.array
+        })
+    })
+};
 
 export { Testimonials };
