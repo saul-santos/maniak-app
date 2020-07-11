@@ -1,8 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+In this application you can visit the Testimonials or Calculator Sections selecting them from the navigation bar placed on the top, Home section stills under construction.
+
+It was designed following a mobile first aproach because nowadays most users visit the websites using their smartphones.
+
+This application was build following best code practices and it is fully tested using react-testing-library and Jest. (Check the code coverage running the following command: `yarn test -- --coverage`).
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn`
+
+Install the required app node_modules
 
 ### `yarn start`
 
@@ -27,42 +39,31 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Technologies stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React
+- React Hooks
+- Redux
+- Redux-Saga
+- React-Bootstrap
+- React-testing-library
+- Jest
+- Font Awesome
+- ES6 features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## App structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+All the application code is contained inside _src_ folder.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Inside every componen folder you will find a _.jsx_ file where the component view and logic is defined, _styles.css_ for component styles and _.spec.js_ containing the unit testing cases for component functionalities.
 
-## Learn More
+* /src
+    * /actions - _Redux actions definition_
+    * /assets - _images, fonts, etc..._
+    * /components - _React components_
+    * /constants - _Application contants, you can find action types definitions here_
+    * /containers - _Components connected to Redux Store_
+    * /reducers - _Redux reducers_
+    * /sagas - _Async actions handlers_
+    * App.js - _Application entry point_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
