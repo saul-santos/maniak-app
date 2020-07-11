@@ -17,4 +17,5 @@ function* fetchTestimonials() {
     }
 }
 
+export { _fetchTestimonials };
 export default fetchTestimonials;

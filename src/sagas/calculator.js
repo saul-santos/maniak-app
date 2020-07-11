@@ -17,4 +17,5 @@ function* fetchCalculatorData() {
     }
 }
 
+export { _fetchCalculatorData };
 export default fetchCalculatorData;
