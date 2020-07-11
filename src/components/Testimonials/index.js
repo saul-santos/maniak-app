@@ -1,1 +1,3 @@
-export { Testimonials } from './Testimonials.jsx';
+import Testimonials from './Testimonials';
+
+export { Testimonials };

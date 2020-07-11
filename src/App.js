@@ -16,10 +16,10 @@ function App() {
                 </Route>
                 <Route path="/calculator">
                     <Calculator />
-            </Route>
+                </Route>
                 <Route path="/">
-                    Under construction... please visit testimonials or calculator
-            </Route>
+                    Home under construction... please visit Testimonials or Calculator
+                </Route>
             </Switch>
         </Router>
     );

@@ -28,11 +28,11 @@ function Testimonials({ actions, testimonials }) {
             <Row>
                 <Col xs={{ span: 8, offset: 4 }} sm={{ span: 5, offset: 7 }} md={{ span: 4, offset: 8 }} lg={{ span: 3, offset: 9 }}>
                     <div className="card-control">
-                        <button onClick={() => setReviewIndex(reviewIndex - 1)} disabled={reviewIndex === 0}>
+                        <button onClick={() => setReviewIndex(reviewIndex - 1)} disabled={reviewIndex === 0} data-testid="previousReviewButton">
                             <FontAwesomeIcon icon={faChevronLeft}/>
                         </button>
                         <p>{`${reviewIndex + 1} / ${reviews.length}`}</p>
-                        <button onClick={() => setReviewIndex(reviewIndex + 1)} disabled={reviewIndex === reviews.length - 1}>
+                        <button onClick={() => setReviewIndex(reviewIndex + 1)} disabled={reviewIndex === reviews.length - 1} data-testid="nextReviewButton">
                             <FontAwesomeIcon icon={faChevronRight}/>
                         </button>
                     </div>
@@ -60,4 +60,4 @@ Testimonials.propTypes = {
     })
 };
 
-export { Testimonials };
+export default Testimonials;

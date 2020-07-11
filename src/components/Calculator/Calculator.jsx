@@ -42,7 +42,7 @@ function Calculator({ actions, calculator }) {
                     </Row>
                     <Row>
                         <Col>
-                            <Form.Control type="range" min={10} max={100} value={ingredientSpending} onChange={handleIngredientSpendingChange}/>
+                            <Form.Control type="range" min={10} max={100} value={ingredientSpending} onChange={handleIngredientSpendingChange} data-testid="ingredients-range"/>
                         </Col>
                     </Row>
                     <Row className="employees-section">
@@ -55,18 +55,18 @@ function Calculator({ actions, calculator }) {
                     </Row>
                     <Row>
                         <Col>
-                            <Form.Control type="range" min={1} max={10} value={employeesNumber} onChange={handleEmployeesNumberChange}/>
+                            <Form.Control type="range" min={1} max={10} value={employeesNumber} onChange={handleEmployeesNumberChange} data-testid="employees-range"/>
                         </Col>
                     </Row>
                     <Row className="results-section">
                         <Col xs={12} sm={12} md={6}>
-                            <p className="result-value">
+                            <p className="result-value" data-testid="result-food-cost-saving">
                                 ${(ingredientSpending * 0.3).toFixed(2)}
                             </p>
                             <p className="result-text">Estimated Food Cost Saving</p>
                         </Col>
                         <Col xs={12} sm={12} md={6}>
-                            <p className="result-value">
+                            <p className="result-value" data-testid="result-annual-savings">
                                 ${(employeesNumber * 1337 + ingredientSpending * 0.3).toFixed(2)}
                             </p>
                             <p className="result-text">Your Estimated Annual Savings</p>
