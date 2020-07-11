@@ -7,7 +7,9 @@ describe('calculator reducer', () => {
             calculator(undefined, {})
         ).toEqual({
             title: '',
-            description: ''
+            description: '',
+            estimatedFoodCostSaving: '0',
+            estimatedAnnualSavings: '0',
         });
     });
 
@@ -23,5 +25,22 @@ describe('calculator reducer', () => {
                 data
             })
         ).toEqual(data);
+    });
+
+    it('should handle CALCULATE_ESTIMATED_COSTS', () => {
+        const values = {
+            ingredientSpending: 70,
+            employeesNumber: 3
+        };
+
+        expect(
+            calculator({}, {
+                type: types.CALCULATE_ESTIMATED_COSTS,
+                values
+            })
+        ).toEqual({
+            estimatedFoodCostSaving: '21.00',
+            estimatedAnnualSavings: '4032.00',
+        });
     });
 });

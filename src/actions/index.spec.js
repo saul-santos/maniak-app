@@ -29,4 +29,11 @@ describe('calculator actions', () => {
             data: 'Test'
         });
     });
+
+    it('calculateEstimatedCosts should create CALCULATE_ESTIMATED_COSTS action', () => {
+        expect(actions.calculateEstimatedCosts('Test')).toEqual({
+            type: types.CALCULATE_ESTIMATED_COSTS,
+            values: 'Test'
+        });
+    });
 });

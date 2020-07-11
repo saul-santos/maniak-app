@@ -16,6 +16,9 @@ function Navigationbar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav" className="navigation-bar">
                 <Nav>
+                    <div className={`navigation-item ${pathname === '/' ? 'active' : ''}`}>
+                        <Link to="/">Home</Link>
+                    </div>
                     <div className={`navigation-item ${pathname === '/testimonials' ? 'active' : ''}`}>
                         <Link to="/testimonials">Testimonials</Link>
                     </div>

@@ -4,7 +4,7 @@ import App from './App';
 
 it('should render the app without errors', () => {
   const { getByText } = render(<App />);
-  const homeText = getByText(/Home/i);
+  const homeText = getByText(/Home under construction/i);
 
   expect(homeText).toBeInTheDocument()
 });
