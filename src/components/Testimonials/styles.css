@@ -9,3 +9,27 @@
     letter-spacing: 0.77px;
     color: var(--main-primary-color);
 }
+
+.card-control {
+    text-align: center;
+    color: var(--main-white-color);
+    background-color: var(--main-primary-color);
+    border-radius: 5px;
+}
+
+.card-control p {
+    font-size: 2rem;
+    font-family: Roboto sans-serif;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.card-control button {
+    color: var(--main-white-color);
+    background-color: var(--main-primary-color);
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    border: none;
+}

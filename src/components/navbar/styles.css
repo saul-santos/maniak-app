@@ -1,23 +1,23 @@
-.header {
-    height: 4rem;
-    align-items: center;
-    background-color: white;
-}
-
 .navigation-bar {
-    list-style: none;
-    margin: 0;
+    justify-content: flex-end
 }
 
-.navigation-bar > li {
-    display: inline-block;
-    padding: 0 20px;
+.navigation-item {
+    padding: 0.5rem 0.5rem;
     font-size: 1rem;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+}
+
+.navigation-item > a {
+    text-decoration: none;
     color: var(--main-primary-color);
 }
 
-.navigation-bar > li > a {
+.navigation-item > a:hover {
     text-decoration: none;
+}
+
+.active {
+    border-bottom: 3px solid var(--main-secondary-color);
 }

@@ -1,37 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import './styles.css';
+import { Link, useLocation } from "react-router-dom";
 import BelloteroLogo from "../../assets/bellotero.svg";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import './styles.css';
 
-import Container from 'react-bootstrap/Container';
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+function Navigationbar() {
+    const { pathname } = useLocation();
 
-function Navbar() {
     return (
-        <Container fluid>
-            <Row className="header">
-                <Col>
-                    <img src={BelloteroLogo} alt="Bellotero Icon"/>
-                </Col>
-                <Col>
-                    <nav>
-                        <ul className="navigation-bar">
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/testimonials">Testimonials</Link>
-                            </li>
-                            <li>
-                                <Link to="/calculator">Calculator</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </Col>
-            </Row>
-        </Container>
+        <Navbar collapseOnSelect expand="lg" bg="white">
+            <Navbar.Brand href="/">
+                <img src={BelloteroLogo} alt="Bellotero Icon" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+            <Navbar.Collapse id="responsive-navbar-nav" className="navigation-bar">
+                <Nav>
+                    <div className={`navigation-item ${pathname === '/testimonials' ? 'active' : ''}`}>
+                        <Link to="/testimonials">Testimonials</Link>
+                    </div>
+                    <div className={`navigation-item ${pathname === '/calculator' ? 'active' : ''}`}>
+                        <Link to="/calculator">Calculator</Link>
+                    </div>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 }
 
-export default Navbar;
+export default Navigationbar;

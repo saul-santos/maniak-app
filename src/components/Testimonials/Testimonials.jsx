@@ -2,9 +2,10 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { ReviewCard } from "../ReviewCard";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Footer } from "../Footer";
 import './styles.css';
 
 function Testimonials({ actions, testimonials }) {
@@ -24,21 +25,24 @@ function Testimonials({ actions, testimonials }) {
                 </Col>
             </Row>
             <Row>
+                <Col xs={{ span: 8, offset: 4 }} sm={{ span: 5, offset: 7 }} md={{ span: 4, offset: 8 }} lg={{ span: 3, offset: 9 }}>
+                    <div className="card-control">
+                        <button onClick={() => setReviewIndex(reviewIndex - 1)} disabled={reviewIndex === 0}>
+                            <FontAwesomeIcon icon={faChevronLeft}/>
+                        </button>
+                        <p>{`${reviewIndex + 1} / ${reviews.length}`}</p>
+                        <button onClick={() => setReviewIndex(reviewIndex + 1)} disabled={reviewIndex === reviews.length - 1}>
+                            <FontAwesomeIcon icon={faChevronRight}/>
+                        </button>
+                    </div>
+                </Col>
+            </Row>
+            <Row>
                 <Col>
                     <ReviewCard {...reviews[reviewIndex] }/>
                 </Col>
             </Row>
-            <Row>
-            <ButtonGroup>
-                <Button variant="primary">{`${reviewIndex + 1} /${reviews.length}`}</Button>
-                <Button variant="primary" onClick={() => setReviewIndex(reviewIndex - 1)} disabled={reviewIndex === 0}>
-                    {'<'}
-                </Button>
-                <Button variant="primary" onClick={() => setReviewIndex(reviewIndex + 1)} disabled={reviewIndex === reviews.length - 1}>
-                    {'>'}
-                </Button>
-            </ButtonGroup>
-            </Row>
+            <Footer/>
         </Container>
     );
 }

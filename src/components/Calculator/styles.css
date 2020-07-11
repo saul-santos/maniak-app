@@ -1,6 +1,6 @@
 .ballotero-title {
     padding: 5rem 0 0.5rem 0;
-    font-family: Roboto;
+    font-family: Roboto sans-serif;
     font-size: 2rem;
     font-weight: 900;
     font-stretch: normal;
@@ -8,4 +8,62 @@
     line-height: 1.11;
     letter-spacing: 0.77px;
     color: var(--main-primary-color);
+}
+
+.ballotero-description {
+    color: var(--main-dark-color);
+}
+
+.ingredients-section {
+    padding-top: 5rem;
+}
+
+.slider-text p, .result-text {
+    font-weight: 500;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.employees-section, .results-section {
+    padding-top: 3rem;
+}
+
+.slider-value {
+    align-self: flex-end;
+    padding: 0.5rem;
+}
+
+.slider-value > p{
+    position: relative;
+    border: 1px solid var(--main-grey-color);
+    margin: 0;
+    padding-right: 1.5rem;
+    color: var(--main-dark-color);
+    background-color: var(--main-white-color);
+    text-align: end;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.slider-value > p > span {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    font-size: 2rem;
+    color: var(--main-grey-color);
+}
+
+.result-value {
+    position: relative;
+    margin: 0;
+    color: var(--main-primary-color);
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.result-text {
+    padding-top: 0;
+    text-align: center;
+    color: var(--main-dark-color);
 }

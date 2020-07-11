@@ -18,7 +18,7 @@ function App() {
                     <Calculator />
             </Route>
                 <Route path="/">
-                    Home
+                    Under construction... please visit testimonials or calculator
             </Route>
             </Switch>
         </Router>
