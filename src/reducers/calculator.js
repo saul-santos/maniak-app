@@ -8,8 +8,6 @@ const initialState = {
 };
 
 function calculator(state = initialState, action) {
-    console.log(action);
-
     switch(action.type) {
         case SET_CALCULATOR_DATA:
             return { ...state, ...action.data };
